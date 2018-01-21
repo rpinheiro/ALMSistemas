@@ -62,6 +62,7 @@
     }
 
     factory.GetUsuarios = function () {
+        //$("#pleaseWaitDialog").show();
         return $http.get("/Usuario/GetUsuarios");
     }
 
