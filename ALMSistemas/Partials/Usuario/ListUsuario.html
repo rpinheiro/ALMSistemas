@@ -1,0 +1,25 @@
+﻿<h3>Clientes</h3>
+<br />
+<input class="btn btn-primary" type="button" ng-click="AbrirTelaCadastro();" value="Cadastrar Novo Usuário"></input>
+<br />
+<br />
+<div>
+    <table class="table">
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>RG</th>
+            <th>CPF</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="usuario in listaUsuarios">
+            <td>{{usuario.Nome}}</td>
+            <td>{{usuario.Idade}}</td>
+            <td>{{usuario.CPF}}</td>
+            <td>{{usuario.RG}}</td>
+            <td><a href="#!/AtualizarUsuarios/{{usuario.Id}}">Editar</a></td>
+            <td><a href="#" ng-click="DeleteUsuario(usuario.Id, this);">Remover</a></td>
+        </tr>
+    </table>
+</div>
